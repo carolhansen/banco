@@ -4,8 +4,7 @@ class Aplicativo(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Tela inicial")
-        self.config(bg="#27B7F5")
-        self.geometry("360x663")
+        self.config(bg="#0761B0")
 
         container = tk.Frame(self)
         container.pack(fill="both", expand=True)
@@ -27,10 +26,7 @@ class Aplicativo(tk.Tk):
 class paginalogin(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
-        self.config(bg="#27B7F5")
         self.controller = controller
-
-        tk.Label(self, text="Bem vindo(a) ao Pybank!", ).pack(pady=20, padx=100)
 
         tk.Label(self, text="Usuário:").pack(pady=5)
         self.entry_usuario = tk.Entry(self)
@@ -56,20 +52,8 @@ class paginalogin(tk.Frame):
 
 class paginaprincipal(tk.Frame):
     def __init__(self, parent, controller):
-        super().__init__(parent)
+        super().__init__()
         self.controller = controller
-
-        self.user_img = tk.PhotoImage(file="banco/User.png")
-        tk.Label(self, image=self.user_img).place(x=6, y=6)
-        tk.Label(self, text="Olá, Carol!", font="Inter").place(x=-2, y=60)
-        
-
-
-
-#class paginaemandamento(tk.Frame):
-#    def __init__(self, parent, controller):
-#        super().__init__(parent)
-#        self.
 
 
 if __name__ == "__main__":
@@ -78,4 +62,3 @@ if __name__ == "__main__":
 
 
 #exportação de imagens
-
